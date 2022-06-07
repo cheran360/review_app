@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import Home from "./screens/home";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
+import Navigator from "./routes/homeStack";
 
 // expo install expo-app-loading
 
@@ -17,7 +18,7 @@ export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   if (fontsLoaded) {
-    return <Home />;
+    return <Navigator />;
   } else {
     return (
       <AppLoading
